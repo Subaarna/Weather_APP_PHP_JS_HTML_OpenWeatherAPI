@@ -8,7 +8,7 @@ ORDER BY weather_time DESC limit 1";
 $result = $mysqli -> query($sql);
 
 if ($result->num_rows == 0) {
-    $url = 'https://api.openweathermap.org/data/2.5/weather?q='. $_GET['City'].'&appid=d637caa37f9ddf9d9423efcd1ed494c1&units=metric';
+    $url = 'https://api.openweathermap.org/data/2.5/weather?q='. $_GET['City'].'&appid='your_openweather_api'&units=metric';
 
     $data = file_get_contents($url);
     $json = json_decode($data, true);
